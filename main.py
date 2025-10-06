@@ -1,6 +1,10 @@
 """
 このファイルは、Webアプリのメイン処理が記述されたファイルです。
 """
+
+import streamlit as st
+st.write("app is running")
+
 from components import display_app_title, display_select_mode
 ############################################################
 # 1. ライブラリの読み込み
