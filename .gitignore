@@ -164,3 +164,20 @@ cython_debug/
 # original
 .chroma/
 logs/
+# より安全な環境変数の除外
+.env*
+!.env.example
+
+# StreamlitのシークレットはUIで設定する前提で除外
+.streamlit/secrets.toml
+
+# OS / エディタのゴミ
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# SQLite 等のローカルDBができる場合の逃しケア
+*.sqlite
+*.sqlite3
+*.db
