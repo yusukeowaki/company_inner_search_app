@@ -24,4 +24,4 @@ html5lib>=1.1
 # Data
 pandas>=2.1
 
-pip install pysqlite3-binary==0.5.2.post3
+pysqlite3-binary==0.5.2.post3
