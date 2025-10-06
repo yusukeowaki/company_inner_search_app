@@ -1,3 +1,20 @@
+# .env → st.secrets の順で読み取る
+import os, streamlit as st
+from dotenv import load_dotenv
+load_dotenv()
+
+def get_env(name, default=None):
+    return os.getenv(name) or st.secrets.get(name, default)
+
+OPENAI_API_KEY = get_env("OPENAI_API_KEY")
+if OPENAI_API_KEY:
+    os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY  # langchain/openai が参照
+
+# ない場合は画面に分かりやすくエラー表示
+if not OPENAI_API_KEY:
+    st.error("OPENAI_API_KEY が未設定です。Streamlit Cloud の Secrets に追加してください。")
+
+
 """
 このファイルは、最初の画面読み込み時にのみ実行される初期化処理が記述されたファイルです。
 """
