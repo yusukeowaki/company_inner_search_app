@@ -1,3 +1,6 @@
+import os
+os.environ.setdefault("USER_AGENT", "company_inner_search_app/1.0")
+
 # .env → st.secrets の順で読み取る
 import os, streamlit as st
 from dotenv import load_dotenv
