@@ -2,10 +2,9 @@
 このファイルは、Webアプリのメイン処理が記述されたファイルです。
 """
 
+import sys
+import logging
 import streamlit as st
-st.write("app is running")
-
-from components import display_app_title, display_select_mode
 ############################################################
 # 1. ライブラリの読み込み
 ############################################################
@@ -14,7 +13,7 @@ from dotenv import load_dotenv
 # ログ出力を行うためのモジュール
 import logging
 # streamlitアプリの表示を担当するモジュール
-import streamlit as st
+
 # （自作）画面表示以外の様々な関数が定義されているモジュール
 import utils
 # （自作）アプリ起動時に実行される初期化処理が記述された関数

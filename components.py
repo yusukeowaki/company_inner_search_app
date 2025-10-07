@@ -286,7 +286,7 @@ def display_search_llm_response(llm_response):
         # メインドキュメントのページ番号は、取得できた場合のみ追加
         page = llm_response["context"][0].metadata.get("page")  # 0始まり or None
         if page is not None:
-         content["main_page_number"] = page  # 保持は0始まりのまま（表示時に +1）
+            content["main_page_number"] = page  # 保持は0始まりのまま（表示時に +1）
         # サブドキュメントの情報は、取得できた場合にのみ追加
         if sub_choices:
             content["sub_message"] = sub_message
